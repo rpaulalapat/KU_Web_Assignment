@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Latitude</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Latitude</a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="maxtemps.html">Latitude vs Max Temperature</a></li>
+              <li><a href="humidity.html">Latitude vs Humidity</a></li>
+              <li><a href="cloudiness.html">Latitude vs Cloudiness</a></li>
+              <li><a href="wind.html">Latitude vs Wind Speed</a></li>
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Overall Grid -->
+  <div class="container">
+
+    <div class="row">
+        <div class="col-md-8 pad top"> <br>
+          <h2>Summary: Weather change with latitude</h2> <br>
+        </div>
+        <div class="col-md-4 pad top"> <br>
+            <h2>Visualizations</h2> <br>
+          </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-8 pad top"> <br>
+
+          <div class="pull-left">
+            <img src="output_data/lat_temp.png" alt="Latitude vs. Max Temperature" width="350" height="250">
+          </div>
+
+          <div class="text-left">
+            <p> The purpose of this project is to analyze how weather changes as you get closer to the
+                equator or away from it. To accomplish this analysis, we first pulled a random sample of over 500 cities 
+                from citypy library and pulled weather data for these from the OpenWeatherMap API. </p> <br>
+            <p> After assembling the dataset, Matplotlib was used to plot various aspects of weather
+                vs. latitude. Factors analyzed included maximum temperature, humidity, cloudiness and wind-speed. </p> <br>
+            <h3> Analysis results summary</h3>
+            <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). 
+                More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year 
+                than the northern hemisphere. This may be due to the tilt of the earth. 
+                There is no strong relationship between latitude and cloudiness, however, it is interesting to see that a 
+                strong band of cities sits at 0, 80, and 100% cloudiness.
+                There is no strong relationship between latitude and wind speed, however in northern hemispheres 
+                there is a flurry of cities with over 20 mph of wind.</p>
+          </div>
+
+        </div>
+
+        <div class="col-md-2 pad top"> <br>
+
+            <div class="pull-right">
+              <a href="maxtemps.html"><img src="output_data/lat_temp.png" alt="Latitude vs. Max Temperature" width="100%" height="100%"></a>
+              <a href="wind.html"><img src="output_data/lat_wind.png" alt="Latitude vs. Wind Speed" width="100%" height="100%"></a>
+            </div>
+  
+         </div>
+  
+         <div class="col-md-2 pad top"> <br>
+  
+          <div class="pull-right">
+            <a href="humidity.html"><img src="output_data/lat_humdt.png" alt="Latitude vs. Humidity" width="100%" height="100%"></a>
+            <a href="cloudiness.html"><img src="output_data/lat_cld.png" alt="Latitude vs. Cloudiness" width="100%" height="100%"></a>
+          </div>
+  
+        </div>
+
+    </div>
+
+  </div>
+
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </html>
